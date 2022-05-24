@@ -1,12 +1,23 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
-app.run(debug=True)
 app.static_folder = 'static'
 app.secret_key = b'&k;5fdRJSj%V4E8W:ysBYXF39A)a&RS[?hQ48R'
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/account')
+def account():
+    return render_template('account.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/FAQ')
+def faq():
+    return render_template('FAQ.html')
 
 @app.route('/login')
 def login():

@@ -1,0 +1,8 @@
+===============================================================================
+FLASK Information:
+===============================================================================
+Installing Packages and Setup:
+
+set FLASK_APP=app.py
+set FLASK_DEBUG=1 (Sets debug mode to true)
+flask run
