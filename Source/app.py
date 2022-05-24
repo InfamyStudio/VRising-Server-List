@@ -21,5 +21,25 @@ def reset():
     return render_template('password.html')
 
 @app.route('/serverlist')
-def reset():
+def serverlist():
     return render_template('serverlist.html')
+
+@app.route('/topservers')
+def topservers():
+    return render_template('topservers.html')
+
+@app.route('/newservers')
+def newservers():
+    return render_template('newservers.html')
+
+@app.errorhandler(404)
+def error404(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(401)
+def error401(e):
+    return render_template('401.html'), 401
+
+@app.errorhandler(500)
+def error500(e):
+    return render_template('500.html'), 500
