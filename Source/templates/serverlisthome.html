@@ -4,17 +4,39 @@
 {% endblock %}
 {% block homepage %}
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Promoted Servers:</h3>
+        <h2 class="mt-4" id="tileheadings">Promoted Servers:</h2>
+        <div class="row">
         {% for serverpromoted in promotedservers %}
-            <h3>Server Name: {{ serverpromoted.name }}</h1>
-            <p>Server Settings: {{ serverpromoted.settings }}</p>
-            <p>Server Created on: {{ serverpromoted.dateposted }}</p>
+            <div class="col-md-4" id="tile">
+                <h3>Server Name: {{ serverpromoted.name }}</h1>
+                <p>Server Settings: {{ serverpromoted.settings }}</p>
+                <p>Server Created on: {{ serverpromoted.dateposted }}</p>
+            </div>
         {% endfor %}
+        </div>
     </div>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Top Servers:</h3>
+        <h2 class="mt-4" id="tileheadings">Top Servers:</h2>
+        <div class="row">
+            {% for serverpromoted in promotedservers %}
+                <div class="col-md-4" id="tile">
+                    <h3>Server Name: {{ serverpromoted.name }}</h1>
+                    <p>Server Settings: {{ serverpromoted.settings }}</p>
+                    <p>Server Created on: {{ serverpromoted.dateposted }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">New Servers:</h3>
+        <h2 class="mt-4" id="tileheadings">New Servers:</h2>
+        <div class="row">
+            {% for serverpromoted in promotedservers %}
+                <div class="col-md-4" id="tile">
+                    <h3>Server Name: {{ serverpromoted.name }}</h1>
+                    <p>Server Settings: {{ serverpromoted.settings }}</p>
+                    <p>Server Created on: {{ serverpromoted.dateposted }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock homepage %}

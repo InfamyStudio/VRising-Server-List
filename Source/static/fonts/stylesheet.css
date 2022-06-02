@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Long Shot';
+    src: url('LongShot.eot');
+    src: url('LongShot.eot?#iefix') format('embedded-opentype'),
+        url('LongShot.woff2') format('woff2'),
+        url('LongShot.woff') format('woff'),
+        url('LongShot.svg#LongShot') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

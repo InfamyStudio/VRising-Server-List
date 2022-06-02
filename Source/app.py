@@ -14,6 +14,11 @@ promotedservers = [
     'settings': 'Full loot',
     'dateposted': '1/3/2020'
 },
+    {
+    'name': 'Server 3',
+    'settings': 'PvE',
+    'dateposted': '1/3/2022'
+}
 ]
 
 @app.route('/')
