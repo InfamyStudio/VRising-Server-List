@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="The Best V Rising Server List on the Net!" />
         <meta name="author" content="Cortex ~ InfamyStudio" />
-        <title>V Rising Server List - Home</title>
+        <title>{% block title %}{% endblock %}</title>
         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
@@ -65,7 +65,8 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        {% block loggedinas %}{% endblock %}
+                        <div class="small">Logged in as:</div>
+                        User
                     </div>
                 </nav>
             </div>
