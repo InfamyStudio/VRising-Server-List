@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block homepage %}
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Promoted Servers:</h3>
+        {% for serverpromoted in promotedservers %}
+            <h3>Server Name: {{ serverpromoted.name }}</h1>
+            <p>Server Settings: {{ serverpromoted.settings }}</p>
+            <p>Server Created on: {{ serverpromoted.dateposted }}</p>
+        {% endfor %}
+    </div>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Top Servers:</h3>
+    </div>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">New Servers:</h3>
+    </div>
+{% endblock homepage %}
+{% block loggedinas %}
+    <div class="small">Logged in as:</div>
+    User
+{% endblock loggedinas %}
