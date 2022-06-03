@@ -49,8 +49,8 @@
   --bs-body-font-size: 1.2rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #c52443;
-  --bs-body-bg: #fff;
+  --bs-body-color: white;
+  --bs-body-bg: #010812;
 }
 
 @font-face {
@@ -104,7 +104,7 @@ hr {
   justify-content: center;
   align-items: center;
   padding: 0.5rem 1rem;
-  border-bottom: 1px solid #e9ecef;
+  /* border-bottom: 1px solid #e9ecef; */
 }
 
 #tile {
@@ -113,7 +113,6 @@ hr {
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1rem;
-  border-bottom: 1px solid #e9ecef;
 }
 
 
@@ -3066,20 +3065,20 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  color: white;
+  background-color: #c52443;;
+  border-color: #ced4da;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
+  background-color: #c52443;
+  border-color: black;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
-  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+  background-color: #c52443;
+  border-color: #ced4da;
+  box-shadow: 0 0 0 0.25rem #ced4da;
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
@@ -11480,6 +11479,7 @@ body {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   position: relative;
+  font-size: 1.5rem;
 }
 .sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
   font-size: 0.9rem;
@@ -11503,7 +11503,7 @@ body {
 
 .sb-sidenav-dark {
   background-color: #212529;
-  color: rgba(255, 255, 255, 0.5);
+  color: #c52443;
 }
 .sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
   color: #c52443;

@@ -4,7 +4,7 @@
 {% endblock %}
 {% block homepage %}
     <div class="container-fluid px-4">
-        <h2 class="mt-4" id="tileheadings">Promoted Servers:</h2>
+        <h2 class="mt-3" id="tileheadings">Promoted Servers:</h2>
         <div class="row">
         {% for serverpromoted in promotedservers %}
             <div class="col-md-4" id="tile">
@@ -13,10 +13,12 @@
                 <p>Server Created on: {{ serverpromoted.dateposted }}</p>
             </div>
         {% endfor %}
+        <img src="{{ url_for('static', filename='assets/titleFlare.png') }}" id="tile">
         </div>
     </div>
+    
     <div class="container-fluid px-4">
-        <h2 class="mt-4" id="tileheadings">Top Servers:</h2>
+        <h2 class="mt-2" id="tileheadings">Top Servers:</h2>
         <div class="row">
             {% for serverpromoted in promotedservers %}
                 <div class="col-md-4" id="tile">
@@ -25,10 +27,11 @@
                     <p>Server Created on: {{ serverpromoted.dateposted }}</p>
                 </div>
             {% endfor %}
+            <img src="{{ url_for('static', filename='assets/titleFlare.png') }}" id="tile">
         </div>
     </div>
     <div class="container-fluid px-4">
-        <h2 class="mt-4" id="tileheadings">New Servers:</h2>
+        <h2 class="mt-2" id="tileheadings">New Servers:</h2>
         <div class="row">
             {% for serverpromoted in promotedservers %}
                 <div class="col-md-4" id="tile">

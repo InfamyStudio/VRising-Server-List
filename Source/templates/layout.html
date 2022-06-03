@@ -7,6 +7,7 @@
         <meta name="description" content="The Best V Rising Server List on the Net!" />
         <meta name="author" content="Cortex ~ InfamyStudio" />
         <title>{% block title %}{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
@@ -37,7 +38,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading"><h3>Menu</h3></div>
+                            <div class="sb-sidenav-menu-heading" id="navHeadings"><h3>Menu</h3></div>
                             <a class="nav-link" href="/">
                                 <div class="sb-nav-link-icon"><i class="fa fa-home"></i></div>
                                 Home
@@ -67,7 +68,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        User
+                        <h3 style="color: white;">{{ user }}</h1>
                     </div>
                 </nav>
             </div>
@@ -75,18 +76,6 @@
                 <main>
                     {% block homepage %}{% endblock %}
                 </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; VRising Server List ~ Cortex 2022</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

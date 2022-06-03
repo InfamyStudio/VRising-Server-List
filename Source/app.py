@@ -21,9 +21,11 @@ promotedservers = [
 }
 ]
 
+user = "InfamyStudio"
+
 @app.route('/')
 def index():
-    return render_template('serverlisthome.html', promotedservers=promotedservers)
+    return render_template('serverlisthome.html', promotedservers=promotedservers, user=user)
 
 @app.route('/account')
 def account():
