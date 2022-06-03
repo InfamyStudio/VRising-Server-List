@@ -63,6 +63,10 @@ def topservers():
 def newservers():
     return render_template('newservers.html')
 
+@app.route('/sponsor')
+def sponsor():
+    return render_template('sponsor.html')
+
 @app.errorhandler(404)
 def error404(e):
     return render_template('404.html'), 404
