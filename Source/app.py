@@ -18,6 +18,11 @@ promotedservers = [
     'name': 'Server 3',
     'settings': 'PvE',
     'dateposted': '1/3/2022'
+},
+    {
+    'name': 'Server 4',
+    'settings': 'Full loot',
+    'dateposted': '1/3/2020'
 }
 ]
 
@@ -33,7 +38,7 @@ def account():
 
 @app.route('/info')
 def about():
-    return render_template('info.html',user=user)
+    return render_template('info.html',promotedservers=promotedservers,user=user)
 
 @app.route('/FAQ')
 def faq():

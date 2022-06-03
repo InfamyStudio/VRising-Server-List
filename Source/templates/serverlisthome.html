@@ -2,45 +2,81 @@
 {% block title %}
     V Rising Server List ~ Home
 {% endblock %}
-{% block homepage %}
+{% block content %}
 <br>
     <div class="container-fluid px-4">
         <h2 class="mt-3" id="tileheadings">Promoted Servers:</h2>
         <div class="row">
         {% for serverpromoted in promotedservers %}
-            <div class="col-md-4" id="tile">
-                <h3>Server Name: {{ serverpromoted.name }}</h1>
-                <p>Server Settings: {{ serverpromoted.settings }}</p>
-                <p>Server Created on: {{ serverpromoted.dateposted }}</p>
+            <div class="col-md-3" id="tile">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/1_V_Rising_Rise_From_Your_Grave.png') }}" alt="Card image cap">
+                    <div class="card-body" style="color: black;">
+                        <h5 class="card-title">Server Name: {{ serverpromoted.name }}</h5>
+                        <p class="card-text">Server Settings: {{ serverpromoted.settings }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Server Created on: {{ serverpromoted.dateposted }}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">VOTE</a>
+                        <a href="#" class="card-link">VIEW</a>
+                        <a href="#" class="card-link">JOIN</a>
+                    </div>
+                </div>
             </div>
         {% endfor %}
-        <img src="{{ url_for('static', filename='assets/titleFlare.png') }}" id="tile">
-        </div>
-    </div>
-    
-    <div class="container-fluid px-4">
-        <h2 class="mt-2" id="tileheadings">Top Servers:</h2>
-        <div class="row">
-            {% for serverpromoted in promotedservers %}
-                <div class="col-md-4" id="tile">
-                    <h3>Server Name: {{ serverpromoted.name }}</h1>
-                    <p>Server Settings: {{ serverpromoted.settings }}</p>
-                    <p>Server Created on: {{ serverpromoted.dateposted }}</p>
-                </div>
-            {% endfor %}
-            <img src="{{ url_for('static', filename='assets/titleFlare.png') }}" id="tile">
+        <img src="{{ url_for('static', filename='assets/titleFlare.png') }}" id="tileImage">
         </div>
     </div>
     <div class="container-fluid px-4">
-        <h2 class="mt-2" id="tileheadings">New Servers:</h2>
+        <h2 class="mt-3" id="tileheadings">Top Servers:</h2>
         <div class="row">
-            {% for serverpromoted in promotedservers %}
-                <div class="col-md-4" id="tile">
-                    <h3>Server Name: {{ serverpromoted.name }}</h1>
-                    <p>Server Settings: {{ serverpromoted.settings }}</p>
-                    <p>Server Created on: {{ serverpromoted.dateposted }}</p>
+        {% for serverpromoted in promotedservers %}
+            <div class="col-md-3" id="tile">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/4_V_Rising_A_World_In_Conflict.png') }}" alt="Card image cap">
+                    <div class="card-body" style="color: black;">
+                        <h5 class="card-title">Server Name: {{ serverpromoted.name }}</h5>
+                        <p class="card-text">Server Settings: {{ serverpromoted.settings }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Server Created on: {{ serverpromoted.dateposted }}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">VOTE</a>
+                        <a href="#" class="card-link">VIEW</a>
+                        <a href="#" class="card-link">JOIN</a>
+                    </div>
                 </div>
-            {% endfor %}
+            </div>
+        {% endfor %}
+        <img src="{{ url_for('static', filename='assets/titleFlare.png') }}" id="tileImage">
         </div>
     </div>
-{% endblock homepage %}
+    <div class="container-fluid px-4">
+        <h2 class="mt-3" id="tileheadings">New Servers:</h2>
+        <div class="row">
+        {% for serverpromoted in promotedservers %}
+            <div class="col-md-3" id="tile">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/5_V_Rising_Explore.png') }}" alt="Card image cap">
+                    <div class="card-body" style="color: black;">
+                        <h5 class="card-title">Server Name: {{ serverpromoted.name }}</h5>
+                        <p class="card-text">Server Settings: {{ serverpromoted.settings }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Server Created on: {{ serverpromoted.dateposted }}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">VOTE</a>
+                        <a href="#" class="card-link">VIEW</a>
+                        <a href="#" class="card-link">JOIN</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    <br>
+{% endblock content %}
