@@ -29,15 +29,15 @@ def index():
 
 @app.route('/account')
 def account():
-    return render_template('account.html')
+    return render_template('account.html',user=user)
 
 @app.route('/info')
 def about():
-    return render_template('info.html')
+    return render_template('info.html',user=user)
 
 @app.route('/FAQ')
 def faq():
-    return render_template('FAQ.html')
+    return render_template('FAQ.html',user=user)
 
 @app.route('/login')
 def login():
@@ -53,19 +53,19 @@ def reset():
 
 @app.route('/serverlist')
 def serverlist():
-    return render_template('serverlist.html')
+    return render_template('serverlist.html',user=user)
 
 @app.route('/topservers')
 def topservers():
-    return render_template('topservers.html')
+    return render_template('topservers.html',user=user)
 
 @app.route('/newservers')
 def newservers():
-    return render_template('newservers.html')
+    return render_template('newservers.html',user=user)
 
 @app.route('/sponsor')
 def sponsor():
-    return render_template('sponsor.html')
+    return render_template('sponsor.html',user=user)
 
 @app.errorhandler(404)
 def error404(e):
